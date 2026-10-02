@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Misi Kata Hubung</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Game Bahasa</p>
+          <h1>Misi Kata Hubung</h1>
+        </div>
+        <div class="hud-mini">
+          <span>⭐ <strong id="score">0</strong></span>
+          <span>💖 <strong id="lives">3</strong></span>
+        </div>
+      </header>
+
+      <div class="progress-wrap">
+        <div class="progress-info">
+          <span>Progress</span>
+          <span id="progress-text">0/0</span>
+        </div>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+
+      <main class="game-panel">
+        <section id="home-screen" class="screen active">
+          <div class="card intro-card">
+            <span class="badge">Petualangan Bahasa</span>
+            <h2>Selamat datang ke dunia kata hubung!</h2>
+            <p>
+              Kamu adalah pahlawan kecil yang perlu menempuh 6 bab. Setiap bab
+              mengandungi cerita dan cabaran. Pilih kata hubung yang betul untuk
+              membuka pintu level seterusnya.
+            </p>
+            <ul class="intro-list">
+              <li>✅ Jawab semua cabaran</li>
+              <li>✨ Kumpul skor tertinggi</li>
+              <li>🧭 Gunakan hint jika stuck</li>
+            </ul>
+            <button id="start-btn" class="primary-btn">Mulakan Petualangan</button>
+          </div>
+        </section>
+
+        <section id="game-screen" class="screen hidden">
+          <div class="card question-card">
+            <div class="question-head">
+              <span id="level-label" class="level-badge">Bab 1</span>
+              <span id="star-display">⭐ 0</span>
+            </div>
+
+            <div id="story-box" class="story-box"></div>
+            <div id="question-box" class="question-box"></div>
+
+            <div id="options" class="options"></div>
+
+            <div class="action-row">
+              <button id="hint-btn" class="secondary-btn">Hint</button>
+              <button id="restart-btn" class="ghost-btn">Ulang Permainan</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+          </div>
+        </section>
+
+        <section id="end-screen" class="screen hidden">
+          <div class="card ending-card">
+            <span class="badge winner-badge">Misi Selesai</span>
+            <h2 id="ending-title">Tahniah!</h2>
+            <p id="ending-message"></p>
+            <div class="ending-score">
+              <span>Skor Akhir</span>
+              <strong id="final-score">0</strong>
+            </div>
+            <button id="play-again-btn" class="primary-btn">Main Lagi</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
